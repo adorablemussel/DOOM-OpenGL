@@ -18,6 +18,16 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\gl_helpers.h" />
+    <ClInclude Include="inc\renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\gl_helpers.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -71,12 +81,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\libs\include;C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\libs\library;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\Libraries\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\Libraries\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\libs\include;C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Szymon\Desktop\GrafikaKomputerowa\GameProject\libs\library;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -136,16 +146,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="glad.c" />
-    <ClCompile Include="gl_helpers.cpp" />
-    <ClCompile Include="renderer.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="gl_helpers.h" />
-    <ClInclude Include="renderer.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
